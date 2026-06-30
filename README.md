@@ -68,7 +68,7 @@ The game includes background music with volume controls. Players can turn music 
 * Web-based game
 * JavaScript / TypeScript
 * React
-* Replit deployment
+* Netlify deployment
 * Custom UI and game systems
 
 ## Purpose
