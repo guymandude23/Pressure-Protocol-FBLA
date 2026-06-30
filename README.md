@@ -1,84 +1,63 @@
-[README.md](https://github.com/user-attachments/files/25475346/README.md)
-# Pressure Protocol
+Pressure Protocol
+Pressure Protocol is an FBLA Computer Game & Simulation Programming project by RK Interactive. It is a career-simulation game where players complete work shifts under pressure while managing time, tasks, mistakes, and decision-making.
 
-A 2D career exploration game where you step into high-pressure professions and see if you can handle the heat. Navigate a cyberpunk hub world, choose a career, pick your difficulty, and survive your shift.
+Project Overview
+Players enter a central career hub and choose a career shift. Each shift has its own scenario, tasks, pressure meter, timer, and results screen. The goal is to complete the shift successfully before pressure reaches the limit or time runs out.
 
-## Careers
+Careers Included
+ER Physician
+Lawyer
+Financial Analyst
+Chef
+Event Manager
+Each career uses the same core systems, but has different gameplay, tasks, and scenarios.
 
-### ER Doctor (Showcase Career)
-Run a busy emergency room. Triage patients by severity (GREEN/YELLOW/RED), perform multi-step treatments with interactive micro-tasks (hold-stable, timing-tap, sequence), manage critical stabilization countdowns, and deal with random ER events like ambulance surges, equipment delays, and patient panic.
+Core Gameplay Loop
+Start from the main menu.
+Enter the central career hub.
+Choose a career portal.
+Complete a work shift.
+Manage pressure and time.
+Receive a custom outcome on the results screen.
+Main Features
+Animated central career hub
+Multiple playable career shifts
+Pressure meter system
+Countdown timer
+Career-specific tasks
+Custom results screen
+Pause menu
+Music toggle and volume control
+Career info question button
+Links to RK Interactive career pages
+High contrast/accessibility feature
+Controls
+WASD / Arrow Keys: Move
+E: Interact
+ESC: Pause
+Mouse: Menu buttons and UI selections
+Question Mark Button: Learn more about the career
+Career Info Button
+Each career has a question mark button that pauses the game and asks if the player wants to learn more about the career. If the player clicks yes, the game opens the matching RK Interactive career page. If the player clicks no, the shift resumes.
 
-### Financial Analyst — Trading Floor
-Execute trades on a fast-moving trading floor using a 3-step Confirm Chain system. Hit timing bars, manage risk checks, and chase the "IN THE ZONE" streak bonus. Watch out for curveballs like breaking news spikes and fakeout moves.
+Career links:
 
-### Chef Rush
-Run a top-down kitchen under pressure. Prep ingredients, cook dishes, plate them up, and serve orders before time runs out. Menus scale with difficulty — from burgers and fries up to sushi and steak.
+ER Physician: https://rkinteractive.app/careers/er-physician
+Lawyer: https://rkinteractive.app/careers/lawyer
+Financial Analyst: https://rkinteractive.app/careers/financial-analyst
+Chef: https://rkinteractive.app/careers/chef
+Event Manager: https://rkinteractive.app/careers/event-manager
+Audio Settings
+The game includes background music with volume controls. Players can turn music on or off and adjust the volume during gameplay. Music defaults to on at 80% volume, and the chosen settings are saved so they persist between sessions.
 
-### Lawyer — Objection Rush
-Defend your client in a courtroom showdown. Pattern-match objections, build your case, and keep the pressure from overwhelming you.
+Technology
+Web-based game
+JavaScript / TypeScript
+React
+Replit deployment
+Custom UI and game systems
+Purpose
+Pressure Protocol helps students explore different careers through interactive simulations. The game connects career learning with decision-making, time management, and pressure-based challenges.
 
-## Features
-
-- **3 Difficulty Levels** — Easy, Medium, and Hard for every career, each with unique settings for timers, spawn rates, penalties, and pressure curves
-- **Shared Pressure System** — A universal stress meter that rises from pending tasks, mistakes, and patient/order failures. Push past Critical (70+) and you're in trouble. Hit 100 and it's game over
-- **Shift Briefing** — Every run starts with a mission briefing showing objectives, win/fail conditions, controls, and pressure rules
-- **Shift Report** — Post-game breakdown with 5 outcome tiers (Star Shift down to Shift Failed), performance metrics, highlights, and tips
-- **Career Records Board** — Track your best outcomes across all 4 careers and 3 difficulties
-- **Pause Menu** — ESC to pause anytime, with resume, restart, and return-to-hub options
-- **Debug Overlay** — Press backtick (`) for live pressure/state readouts
-
-## Tech Stack
-
-- **Frontend:** React, TypeScript, Vite, Tailwind CSS, shadcn/ui
-- **Rendering:** HTML5 Canvas (procedural — no sprites or external art)
-- **Backend:** Node.js, Express, PostgreSQL, Drizzle ORM
-- **State:** React hooks — all game logic runs client-side
-
-## Getting Started
-
-1. Install dependencies:
-   ```
-   npm install
-   ```
-
-2. Start the development server:
-   ```
-   npm run dev
-   ```
-
-3. Open the app at `http://localhost:5000`
-
-## Controls
-
-| Action | Keys |
-|--------|------|
-| Move (Hub) | WASD or Arrow Keys |
-| Interact | Click / On-screen buttons |
-| Pause | ESC |
-| Debug Overlay | Backtick (`) |
-
-## Project Structure
-
-```
-client/src/
-  pages/game.tsx          — Main game component (all screens)
-  components/
-    er-game-module.tsx    — ER Doctor gameplay
-    trading-floor-module.tsx — Financial Analyst gameplay
-    chef-game-module.tsx  — Chef Rush gameplay
-    lawyer-game-module.tsx — Lawyer gameplay
-    SimulationSelect.tsx  — Difficulty selection screen
-    PreBrief.tsx          — Shift briefing screen
-    ShiftReport.tsx       — Post-game results screen
-    CareerRecords.tsx     — Best outcomes tracker
-    PauseMenu.tsx         — Pause overlay
-    SharedHUD.tsx         — Pressure bar and timer HUD
-  config/
-    simulationConfig.ts   — Difficulty configs and scenarios
-server/
-  index.ts               — Express server entry point
-  routes.ts              — API routes
-  storage.ts             — Database storage interface
-shared/
-  schema.ts              — Drizzle ORM schema
-```
+Team
+RK Interactive FBLA Computer Game & Simulation Programming
